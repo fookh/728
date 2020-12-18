@@ -1204,6 +1204,10 @@ ul.drop-rates {
 	margin: 0px;
 }
 
+.shard-content#avis {
+	width: 100%;
+}
+
 .shard-ability-row > * {
 	vertical-align: middle;
 }
@@ -1227,6 +1231,10 @@ ul.drop-rates {
 	margin-right: 10px;
 	display: inline-block;
 	box-shadow: 0px 0px 10px #000000;
+}
+
+.shard-icon#avis {
+	background-image: url( '../assets/brain.png' );
 }
 
 .shard-ui {
@@ -1286,6 +1294,8 @@ ul.drop-rates {
 .patch-ability-desc {
 	font-size: 18px;
 	color: #ffffffaa;
+	padding-top: 4px;
+	padding-bottom: 26px;
 	
 }
 

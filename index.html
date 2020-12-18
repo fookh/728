@@ -41,11 +41,33 @@
 
 <script language="javascript">
 
-    fetch('https://raw.githubusercontent.com/fookh/728/master/test.txt')
-      .then(response => response.text())
+    function myFetchAndReplace(name) {
+      const url = 'https://raw.githubusercontent.com/fookh/728/master/' + name + '.json';
+
+      fetch(url)
+      .then(response => response.json())
       .then(data => {
-        document.querySelector("#testAvis").innerHTML = data;
+        console.log(data);
+        const allHeroes = Object.keys(data);
+
+        allHeroes.map((hero) => {
+          const capitalizedHero = hero.charAt(0).toUpperCase() + hero.slice(1);
+          const baseSelector = "#" + name + capitalizedHero;
+          const titleSelector = baseSelector + "Title";
+          const commentSelector = baseSelector + "Comment";
+
+          document.querySelector(titleSelector).innerHTML = data.abaddon.title;
+          document.querySelector(commentSelector).innerHTML = data.abaddon.comment;
+        })
+        console.log(allHeroes)
+
       })
+    } 
+
+    this.myFetchAndReplace("youyou");
+    this.myFetchAndReplace("voja");
+    this.myFetchAndReplace("namax");
+    this.myFetchAndReplace("hugo");
 
   function MM_preloadImages() { //v3.0
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
@@ -166,7 +188,6 @@
           <h1>Analyse de patch</h1>
           <h1>FroggedTV</h1>
 
-          <div id="testAvis">coucou</div>
           <div class="shards"></div>
           <div id="General" class="padding-bottom-lg">
             <div class="general"></div>
@@ -255,7 +276,41 @@ Alt-Clicking on the Scepter and Shard UI will notify your allies whether
       </li></ul><div class="shard-row"><div class="shard-content"><div class="shard-label"><div class="shard-icon"></div><div class="shard-ability-label">Aghanim's Shard Ability</div></div><div class="shard-ability"><div class="shard-ability-name"><div class="patch-ability-name">Aphotic Shield</div><div class="patch-ability-tag upgrade">Upgrade</div>
       </div><div class="patch-ability-desc"> Causes Mist Coil and Aphotic Shield to apply a Curse of Avernus stack on enemies. Increases base slow by 6%.
       </div></div></div><div class="shard-video"><div class="shard-video-label"><div class="shard-video-icon"></div><div class="shard-video-play">Hover to Play</div></div><div class="shard-video-overlay"></div><video onclick="" class="patch-video" onmouseover="this.play()" muted="muted" loop="" poster="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/aghanims_shard/abaddon.jpg"><source type="video/webm" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/aghanims_shard/abaddon.webm"><source type="video/mp4" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/aghanims_shard/abaddon.mp4"></video></div></div>
-    </div>
+      <!-- My code starts here -->
+      <div class="shard-row">
+        <div class="shard-content" id="avis">
+          <div class="shard-label">
+            <div class="shard-icon" id="avis"></div>
+            <div class="shard-ability-label">L'avis des experts</div>
+          </div>
+          <div class="shard-ability">
+            <div class="shard-ability-name">
+              <div class="patch-ability-name">Youyou</div>
+              <div class="patch-ability-tag upgrade" id="youyouAbaddonTitle">Title</div>
+            </div>
+            <div class="patch-ability-desc" id="youyouAbaddonComment">Comment</div>
+
+            <div class="shard-ability-name">
+              <div class="patch-ability-name">v0ja</div>
+              <div class="patch-ability-tag upgrade" id="vojaAbaddonTitle">Title</div>
+            </div>
+            <div class="patch-ability-desc" id="vojaAbaddonComment">Comment</div>
+
+            <div class="shard-ability-name">
+              <div class="patch-ability-name">Namax</div>
+              <div class="patch-ability-tag upgrade" id="namaxAbaddonTitle">Title</div>
+            </div>
+            <div class="patch-ability-desc" id="namaxAbaddonComment">Comment</div>
+
+            <div class="shard-ability-name">
+              <div class="patch-ability-name">Hugo</div>
+              <div class="patch-ability-tag upgrade" id="hugoAbaddonTitle">Title</div>
+            </div>
+            <div class="patch-ability-desc" id="hugoAbaddonComment">Comment</div>
+          </div>
+        </div>
+      </div>
+      <!-- My code finishes here -->
 
     <div class="hero-row"><div class="row-title"><div class="ChangeNoteImage"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/alchemist_lg.png" width="150" height="auto"></div><div class="name">Alchemist
       </div></div><ul><li> Unstable Concoction manacost reduced from 120 to 90/100/110/120

@@ -1,9 +1,9 @@
-{ abaddon:
-    { title: "fair enough"
-    , comment: "C'est vraiment super sympa"
+{ "abaddon":
+    { "title": "fair enough"
+    , "comment": "C'est vraiment super sympa"
     }
 , alchemist:
-    { title: "fair enough"
-    , comment: "C'est vraiment super sympa"
+    { "title": "fair enough"
+    , "comment": "C'est vraiment super sympa"
     }
 }

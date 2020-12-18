@@ -1,9 +1,477 @@
 { "abaddon":
-    { "title": "fair enough"
-    , "comment": "Cest vraiment super sympa"
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
     }
 , "alchemist":
-    { "title": "fair enough"
-    , "comment": "Cest vraiment super sympa"
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "ancientApparition":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "antimage":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "arcWarden":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "axe":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "bane":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "batrider":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "beastmaster":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "bloodseeker":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "bountyHunter":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "brewmaster":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "bristleback":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "broodmother":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "centaur":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "chaosKnight":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "chen":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "clinkz":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "rattletrap":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "crystalMaiden":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "darkSeer":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "darkWillow":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "dazzle":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "deathProphet":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "disruptor":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "doomBringer":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "dragonKnight":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "drowRanger":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "earthSpirit":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "earthshaker":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "elderTitan":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "emberSpirit":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "enchantress":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "enigma":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "facelessVoid":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "grimstroke":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "gyrocopter":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "huskar":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "invoker":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "wisp":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "jakiro":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "juggernaut":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "keeperOfTheLight":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "kunkka":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "legionCommander":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "leshrac":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "lich":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "lifeStealer":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "lina":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "lion":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "loneDruid":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "luna":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "lycan":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "magnataur":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "mars":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "medusa":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "meepo":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "mirana":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "monkeyKing":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "morphling":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "nagaSiren":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "furion":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "necrolyte":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "nightStalker":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "nyxAssassin":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "ogreMagi":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "omniknight":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "oracle":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "obsidianDestroyer":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "pangolier":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "phantomAssassin":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "phantomLancer":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "phoenix":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "puck":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "pudge":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "pugna":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "queenofpain":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "razor":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "riki":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "rubick":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "sandKing":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "shadowDemon":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "nevermore":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "shadowShaman":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "silencer":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "skywrathMage":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "slardar":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "slark":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "snapfire":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "sniper":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "spectre":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "spiritBreaker":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "stormSpirit":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "sven":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "techies":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "templarAssassin":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "terrorblade":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "tidehunter":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "shredder":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "tinker":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "tiny":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "treant":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "trollWarlord":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "tusk":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "abyssalUnderlord":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "undying":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "ursa":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "vengefulspirit":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "venomancer":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "viper":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "visage":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "voidSpirit":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "warlock":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "weaver":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "windrunner":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "winterWyvern":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "witchDoctor":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "skeletonKing":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
+    }
+, "zuus":
+    { "title": "titre à remplir"
+    , "comment": "Commentaire à remplir"
     }
 }

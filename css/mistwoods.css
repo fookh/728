@@ -1245,6 +1245,20 @@ ul.drop-rates {
 	background-repeat: no-repeat;
 }
 
+.avis-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.notation-icon {
+	height: 300px;
+	width: 300px;
+	margin: auto;
+	background-color: black;
+	border-radius: 165px;
+	border: 6px solid white;
+}
+
 .shard-ability {
 	padding: 20px;
 }

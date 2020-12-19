@@ -41,6 +41,8 @@
 
 <script language="javascript">
 
+    var allNotes = [];
+
     function myFetchAndReplace(name) {
       const url = 'https://raw.githubusercontent.com/fookh/728/master/' + name + '.json';
 
@@ -54,18 +56,78 @@
           const baseSelector = "#" + name + capitalizedHero;
           const titleSelector = baseSelector + "Title";
           const commentSelector = baseSelector + "Comment";
+          const { title, comment, note } = data[hero];
 
-          document.querySelector(titleSelector).innerHTML = data.abaddon.title;
-          document.querySelector(commentSelector).innerHTML = data.abaddon.comment;
+          document.querySelector(titleSelector).innerHTML = title;
+          document.querySelector(commentSelector).innerHTML = comment;
+          allNotes.push({ hero, note })
         })
-
       })
-    } 
+    }
 
-    this.myFetchAndReplace("youyou");
-    this.myFetchAndReplace("voja");
-    this.myFetchAndReplace("namax");
-    this.myFetchAndReplace("hugo");
+    function groupBy(tableauObjets, propriete){
+      return tableauObjets.reduce(function (acc, obj) {
+        var cle = obj[propriete];
+
+        if(!acc[cle]){
+          acc[cle] = [];
+        }
+
+        if (obj.note && obj.note !== 0) {
+          acc[cle].push(obj.note);
+        }
+        return acc;
+      }, {});
+    }
+
+    function giveFinalNotes() {
+      const groupedNotes = groupBy(allNotes, "hero");
+
+      const allHeroes = Object.keys(groupedNotes);
+
+      allHeroes.map((hero) => {
+        const numberOfNotes = groupedNotes[hero].length;
+
+        var finalScore = 0;
+        if (numberOfNotes > 1) {
+          const totalScore = groupedNotes[hero].reduce((a, b) => a + b, 0);
+          finalScore = totalScore / numberOfNotes;
+        }
+
+        const notationSelector = "#" + hero + "NotationIcon";
+
+        console.log(hero, finalScore);
+          if (finalScore > 4.5) {
+            document.querySelector(notationSelector).src="assets/lordgasm.png";
+          } else if (finalScore > 3.5) {
+          document.querySelector(notationSelector).src="assets/pogchamp.png";
+          document.querySelector(notationSelector).style.transform = "scaleX(-1)";
+         } else if (finalScore > 0 && finalScore < 1.2) {
+          document.querySelector(notationSelector).src="assets/frgcry.png";
+         } else if (finalScore > 0 && finalScore < 2) {
+          document.querySelector(notationSelector).src="assets/LUL.png";
+         } else {
+          document.querySelector(notationSelector).style.visibility = 'hidden';
+         }
+      })
+    }
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function main() {
+      this.myFetchAndReplace("youyou");
+      this.myFetchAndReplace("voja");
+      this.myFetchAndReplace("namax");
+      this.myFetchAndReplace("hugo");
+      
+      await sleep(2000);
+
+      this.giveFinalNotes();
+    }
+
+    main()
 
   function MM_preloadImages() { //v3.0
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
@@ -281,30 +343,34 @@ Alt-Clicking on the Scepter and Shard UI will notify your allies whether
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
-          <div class="shard-ability">
-            <div class="shard-ability-name">
-              <div class="patch-ability-name">Youyou</div>
-              <div class="patch-ability-tag upgrade" id="youyouAbaddonTitle">Title</div>
+          <div class="avis-container">
+            <div class="shard-ability">
+                <div class="shard-ability-name">
+                  <div class="patch-ability-name">Youyou</div>
+                  <div class="patch-ability-tag upgrade" id="youyouAbaddonTitle">Title</div>
+                </div>
+                <div class="patch-ability-desc" id="youyouAbaddonComment">Comment</div>
+                
+                <div class="shard-ability-name">
+                  <div class="patch-ability-name">v0ja</div>
+                  <div class="patch-ability-tag upgrade" id="vojaAbaddonTitle">Title</div>
+                </div>
+                <div class="patch-ability-desc" id="vojaAbaddonComment">Comment</div>
+                
+                <div class="shard-ability-name">
+                  <div class="patch-ability-name">Namax</div>
+                  <div class="patch-ability-tag upgrade" id="namaxAbaddonTitle">Title</div>
+                </div>
+                <div class="patch-ability-desc" id="namaxAbaddonComment">Comment</div>
+                
+                <div class="shard-ability-name">
+                  <div class="patch-ability-name">Hugo</div>
+                  <div class="patch-ability-tag upgrade" id="hugoAbaddonTitle">Title</div>
+                </div>
+                <div class="patch-ability-desc" id="hugoAbaddonComment">Comment</div>
+              </div>
+              <img class="notation-icon" id="abaddonNotationIcon">
             </div>
-            <div class="patch-ability-desc" id="youyouAbaddonComment">Comment</div>
-
-            <div class="shard-ability-name">
-              <div class="patch-ability-name">v0ja</div>
-              <div class="patch-ability-tag upgrade" id="vojaAbaddonTitle">Title</div>
-            </div>
-            <div class="patch-ability-desc" id="vojaAbaddonComment">Comment</div>
-
-            <div class="shard-ability-name">
-              <div class="patch-ability-name">Namax</div>
-              <div class="patch-ability-tag upgrade" id="namaxAbaddonTitle">Title</div>
-            </div>
-            <div class="patch-ability-desc" id="namaxAbaddonComment">Comment</div>
-
-            <div class="shard-ability-name">
-              <div class="patch-ability-name">Hugo</div>
-              <div class="patch-ability-tag upgrade" id="hugoAbaddonTitle">Title</div>
-            </div>
-            <div class="patch-ability-desc" id="hugoAbaddonComment">Comment</div>
           </div>
         </div>
       </div>
@@ -334,6 +400,7 @@ Cooldown: 45. Manacost: 125. Can be used on self.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -359,6 +426,7 @@ Cooldown: 45. Manacost: 125. Can be used on self.
             </div>
             <div class="patch-ability-desc" id="hugoAlchemistComment">Comment</div>
           </div>
+          <img class="notation-icon" id="alchemistNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -378,6 +446,7 @@ Cooldown: 45. Manacost: 125. Can be used on self.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -403,6 +472,7 @@ Cooldown: 45. Manacost: 125. Can be used on self.
             </div>
             <div class="patch-ability-desc" id="hugoAncientApparitionComment">Comment</div>
           </div>
+          <img class="notation-icon" id="ancientApparitionNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -430,6 +500,7 @@ Manacost: 50
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -455,6 +526,7 @@ Manacost: 50
             </div>
             <div class="patch-ability-desc" id="hugoAntimageComment">Comment</div>
           </div>
+          <img class="notation-icon" id="antimageNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -482,6 +554,7 @@ Duplicated Wraiths do not duplicate again
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -507,6 +580,7 @@ Duplicated Wraiths do not duplicate again
             </div>
             <div class="patch-ability-desc" id="hugoArcWardenComment">Comment</div>
           </div>
+          <img class="notation-icon" id="arcWardenNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -534,6 +608,7 @@ cooldown. Provides +20 Attack Speed.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -559,6 +634,7 @@ cooldown. Provides +20 Attack Speed.
             </div>
             <div class="patch-ability-desc" id="hugoAxeComment">Comment</div>
           </div>
+          <img class="notation-icon" id="axeNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -595,6 +671,7 @@ target.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -620,6 +697,7 @@ target.
             </div>
             <div class="patch-ability-desc" id="hugoBaneComment">Comment</div>
           </div>
+          <img class="notation-icon" id="baneNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -651,6 +729,7 @@ second cooldown when used on allies.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -676,6 +755,7 @@ second cooldown when used on allies.
             </div>
             <div class="patch-ability-desc" id="hugoBatriderComment">Comment</div>
           </div>
+          <img class="notation-icon" id="batriderNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -702,6 +782,7 @@ flies towards the target enemy, dealing 175 damage and stunning them for
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -727,6 +808,7 @@ flies towards the target enemy, dealing 175 damage and stunning them for
             </div>
             <div class="patch-ability-desc" id="hugoBeastmasterComment">Comment</div>
           </div>
+          <img class="notation-icon" id="beastmasterNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -759,6 +841,7 @@ amount. Only affects Bloodseeker.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -784,6 +867,7 @@ amount. Only affects Bloodseeker.
             </div>
             <div class="patch-ability-desc" id="hugoBloodseekerComment">Comment</div>
           </div>
+          <img class="notation-icon" id="bloodseekerNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -805,6 +889,7 @@ amount. Only affects Bloodseeker.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -830,6 +915,7 @@ amount. Only affects Bloodseeker.
             </div>
             <div class="patch-ability-desc" id="hugoBountyHunterComment">Comment</div>
           </div>
+          <img class="notation-icon" id="bountyHunterNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -873,6 +959,7 @@ Applies a 20/30/40% slow and Disarm for 2.5 seconds. Cooldown: 20.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -898,6 +985,7 @@ Applies a 20/30/40% slow and Disarm for 2.5 seconds. Cooldown: 20.
             </div>
             <div class="patch-ability-desc" id="hugoBrewmasterComment">Comment</div>
           </div>
+          <img class="notation-icon" id="brewmasterNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -922,6 +1010,7 @@ Range: 1500. Cooldown: 20. Manacost: 100.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -947,6 +1036,7 @@ Range: 1500. Cooldown: 20. Manacost: 100.
             </div>
             <div class="patch-ability-desc" id="hugoBristlebackComment">Comment</div>
           </div>
+          <img class="notation-icon" id="bristlebackNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -967,6 +1057,7 @@ Cast Range: 900. Cooldown: 12. Manacost: 50.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -992,6 +1083,7 @@ Cast Range: 900. Cooldown: 12. Manacost: 50.
             </div>
             <div class="patch-ability-desc" id="hugoBroodmotherComment">Comment</div>
           </div>
+          <img class="notation-icon" id="broodmotherNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1014,6 +1106,7 @@ refreshes per stack, up to 5 stacks. Slows enemies by 15% for 2 seconds.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1039,6 +1132,7 @@ refreshes per stack, up to 5 stacks. Slows enemies by 15% for 2 seconds.
             </div>
             <div class="patch-ability-desc" id="hugoCentaurComment">Comment</div>
           </div>
+          <img class="notation-icon" id="centaurNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1056,6 +1150,7 @@ refreshes per stack, up to 5 stacks. Slows enemies by 15% for 2 seconds.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1081,6 +1176,7 @@ refreshes per stack, up to 5 stacks. Slows enemies by 15% for 2 seconds.
             </div>
             <div class="patch-ability-desc" id="hugoChaosKnightComment">Comment</div>
           </div>
+          <img class="notation-icon" id="chaosKnightNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1109,6 +1205,7 @@ Immune Allies.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1134,6 +1231,7 @@ Immune Allies.
             </div>
             <div class="patch-ability-desc" id="hugoChenComment">Comment</div>
           </div>
+          <img class="notation-icon" id="chenNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1154,6 +1252,7 @@ Immune Allies.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1179,6 +1278,7 @@ Immune Allies.
             </div>
             <div class="patch-ability-desc" id="hugoClinkzComment">Comment</div>
           </div>
+          <img class="notation-icon" id="clinkzNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1201,6 +1301,7 @@ Manacost: 150.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1226,6 +1327,7 @@ Manacost: 150.
             </div>
             <div class="patch-ability-desc" id="hugoRattletrapComment">Comment</div>
           </div>
+          <img class="notation-icon" id="rattletrapNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1251,6 +1353,7 @@ channeling as long as a valid target is in range.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1276,6 +1379,7 @@ channeling as long as a valid target is in range.
             </div>
             <div class="patch-ability-desc" id="hugoCrystalMaidenComment">Comment</div>
           </div>
+          <img class="notation-icon" id="crystalMaidenNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1302,6 +1406,7 @@ Illusions lasts for 5 seconds.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1327,6 +1432,7 @@ Illusions lasts for 5 seconds.
             </div>
             <div class="patch-ability-desc" id="hugoDarkSeerComment">Comment</div>
           </div>
+          <img class="notation-icon" id="darkSeerNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1355,6 +1461,7 @@ how it ends). Reduces cooldown by 3 seconds.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1380,6 +1487,7 @@ how it ends). Reduces cooldown by 3 seconds.
             </div>
             <div class="patch-ability-desc" id="hugoDarkWillowComment">Comment</div>
           </div>
+          <img class="notation-icon" id="darkWillowNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1403,6 +1511,7 @@ Dazzle
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1428,6 +1537,7 @@ Dazzle
             </div>
             <div class="patch-ability-desc" id="hugoDazzleComment">Comment</div>
           </div>
+          <img class="notation-icon" id="dazzleNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1453,6 +1563,7 @@ seconds (starts from cast time).
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1478,6 +1589,7 @@ seconds (starts from cast time).
             </div>
             <div class="patch-ability-desc" id="hugoDeathProphetComment">Comment</div>
           </div>
+          <img class="notation-icon" id="deathProphetNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1500,6 +1612,7 @@ on allies.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1525,6 +1638,7 @@ on allies.
             </div>
             <div class="patch-ability-desc" id="hugoDisruptorComment">Comment</div>
           </div>
+          <img class="notation-icon" id="disruptorNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1547,6 +1661,7 @@ multiple of 3 or above level 24, they will be stunned for an additional
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1572,6 +1687,7 @@ multiple of 3 or above level 24, they will be stunned for an additional
             </div>
             <div class="patch-ability-desc" id="hugoDoomBringerComment">Comment</div>
           </div>
+          <img class="notation-icon" id="doomBringerNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1596,6 +1712,7 @@ Cooldown: 20. Manacost: 150.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1621,6 +1738,7 @@ Cooldown: 20. Manacost: 150.
             </div>
             <div class="patch-ability-desc" id="hugoDragonKnightComment">Comment</div>
           </div>
+          <img class="notation-icon" id="dragonKnightNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1647,6 +1765,7 @@ stacks, they burst and deal 60 magic damage per stack and 25% slow for 2
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1672,6 +1791,7 @@ stacks, they burst and deal 60 magic damage per stack and 25% slow for 2
             </div>
             <div class="patch-ability-desc" id="hugoDrowRangerComment">Comment</div>
           </div>
+          <img class="notation-icon" id="drowRangerNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1691,6 +1811,7 @@ stacks, they burst and deal 60 magic damage per stack and 25% slow for 2
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1716,6 +1837,7 @@ stacks, they burst and deal 60 magic damage per stack and 25% slow for 2
             </div>
             <div class="patch-ability-desc" id="hugoEarthSpiritComment">Comment</div>
           </div>
+          <img class="notation-icon" id="earthSpiritNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1735,6 +1857,7 @@ aftershock effect is replicated throughout the fissure path.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1760,6 +1883,7 @@ aftershock effect is replicated throughout the fissure path.
             </div>
             <div class="patch-ability-desc" id="hugoEarthshakerComment">Comment</div>
           </div>
+          <img class="notation-icon" id="earthshakerNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1779,6 +1903,7 @@ of the Astral Spirit as it completes its stomp.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1804,6 +1929,7 @@ of the Astral Spirit as it completes its stomp.
             </div>
             <div class="patch-ability-desc" id="hugoElderTitanComment">Comment</div>
           </div>
+          <img class="notation-icon" id="elderTitanNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1826,6 +1952,7 @@ hero leaves a Fire Remnant nearby. Kills within 400 range of you count.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1851,6 +1978,7 @@ hero leaves a Fire Remnant nearby. Kills within 400 range of you count.
             </div>
             <div class="patch-ability-desc" id="hugoEmberSpiritComment">Comment</div>
           </div>
+          <img class="notation-icon" id="emberSpiritNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1872,6 +2000,7 @@ hero leaves a Fire Remnant nearby. Kills within 400 range of you count.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1897,6 +2026,7 @@ hero leaves a Fire Remnant nearby. Kills within 400 range of you count.
             </div>
             <div class="patch-ability-desc" id="hugoEnchantressComment">Comment</div>
           </div>
+          <img class="notation-icon" id="enchantressNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1920,6 +2050,7 @@ hero leaves a Fire Remnant nearby. Kills within 400 range of you count.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1945,6 +2076,7 @@ hero leaves a Fire Remnant nearby. Kills within 400 range of you count.
             </div>
             <div class="patch-ability-desc" id="hugoEnigmaComment">Comment</div>
           </div>
+          <img class="notation-icon" id="enigmaNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -1968,6 +2100,7 @@ cast range by 200. (Note: Does not change health the second use)
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -1993,6 +2126,7 @@ cast range by 200. (Note: Does not change health the second use)
             </div>
             <div class="patch-ability-desc" id="hugoFacelessVoidComment">Comment</div>
           </div>
+          <img class="notation-icon" id="facelessVoidNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2022,6 +2156,7 @@ Range: 700. Cooldown: 14. Manacost: 125
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2047,6 +2182,7 @@ Range: 700. Cooldown: 14. Manacost: 125
             </div>
             <div class="patch-ability-desc" id="hugoGrimstrokeComment">Comment</div>
           </div>
+          <img class="notation-icon" id="grimstrokeNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2067,6 +2203,7 @@ Range: 700. Cooldown: 14. Manacost: 125
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2092,6 +2229,7 @@ Range: 700. Cooldown: 14. Manacost: 125
             </div>
             <div class="patch-ability-desc" id="hugoGyrocopterComment">Comment</div>
           </div>
+          <img class="notation-icon" id="gyrocopterNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2114,6 +2252,7 @@ Range: 700. Cooldown: 14. Manacost: 125
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2139,6 +2278,7 @@ Range: 700. Cooldown: 14. Manacost: 125
             </div>
             <div class="patch-ability-desc" id="hugoHuskarComment">Comment</div>
           </div>
+          <img class="notation-icon" id="huskarNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2163,6 +2303,7 @@ Range: 700. Cooldown: 14. Manacost: 125
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2188,6 +2329,7 @@ Range: 700. Cooldown: 14. Manacost: 125
             </div>
             <div class="patch-ability-desc" id="hugoInvokerComment">Comment</div>
           </div>
+          <img class="notation-icon" id="invokerNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2217,6 +2359,7 @@ Range: 700. Cooldown: 14. Manacost: 125
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2242,6 +2385,7 @@ Range: 700. Cooldown: 14. Manacost: 125
             </div>
             <div class="patch-ability-desc" id="hugoWispComment">Comment</div>
           </div>
+          <img class="notation-icon" id="wispNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2263,6 +2407,7 @@ damage per second for 4 seconds. Cooldown: 12.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2288,6 +2433,7 @@ damage per second for 4 seconds. Cooldown: 12.
             </div>
             <div class="patch-ability-desc" id="hugoJakiroComment">Comment</div>
           </div>
+          <img class="notation-icon" id="jakiroNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2310,6 +2456,7 @@ damage per second for 4 seconds. Cooldown: 12.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2335,6 +2482,7 @@ damage per second for 4 seconds. Cooldown: 12.
             </div>
             <div class="patch-ability-desc" id="hugoJuggernautComment">Comment</div>
           </div>
+          <img class="notation-icon" id="juggernautNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2377,6 +2525,7 @@ movement manipulation that pulls units inwards at a rate of 60 units per
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2402,6 +2551,7 @@ movement manipulation that pulls units inwards at a rate of 60 units per
             </div>
             <div class="patch-ability-desc" id="hugoKeeperOfTheLightComment">Comment</div>
           </div>
+          <img class="notation-icon" id="keeperOfTheLightNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2429,6 +2579,7 @@ you. Has 700 speed and 750 radius. Cooldown: 16. Manacost: 150
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2454,6 +2605,7 @@ you. Has 700 speed and 750 radius. Cooldown: 16. Manacost: 150
             </div>
             <div class="patch-ability-desc" id="hugoKunkkaComment">Comment</div>
           </div>
+          <img class="notation-icon" id="kunkkaNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2476,6 +2628,7 @@ within 900 radius. Does not center on the same target twice. Prioritizes
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2501,6 +2654,7 @@ within 900 radius. Does not center on the same target twice. Prioritizes
             </div>
             <div class="patch-ability-desc" id="hugoLegionCommanderComment">Comment</div>
           </div>
+          <img class="notation-icon" id="legionCommanderNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2527,6 +2681,7 @@ between each one. Each time the radius increases by 75. Split Earth echo
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2552,6 +2707,7 @@ between each one. Each time the radius increases by 75. Split Earth echo
             </div>
             <div class="patch-ability-desc" id="hugoLeshracComment">Comment</div>
           </div>
+          <img class="notation-icon" id="leshracNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2574,6 +2730,7 @@ Cast Range: 750. Cooldown: 25. Manacost: 150
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2599,6 +2756,7 @@ Cast Range: 750. Cooldown: 25. Manacost: 150
             </div>
             <div class="patch-ability-desc" id="hugoLichComment">Comment</div>
           </div>
+          <img class="notation-icon" id="lichNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2633,6 +2791,7 @@ seconds cooldown. Max slow 50%. Manacost: 125
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2658,6 +2817,7 @@ seconds cooldown. Max slow 50%. Manacost: 125
             </div>
             <div class="patch-ability-desc" id="hugoLifeStealerComment">Comment</div>
           </div>
+          <img class="notation-icon" id="lifeStealerNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2686,6 +2846,7 @@ path.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2711,6 +2872,7 @@ path.
             </div>
             <div class="patch-ability-desc" id="hugoLinaComment">Comment</div>
           </div>
+          <img class="notation-icon" id="linaNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2735,6 +2897,7 @@ Prioritizes heroes.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2760,6 +2923,7 @@ Prioritizes heroes.
             </div>
             <div class="patch-ability-desc" id="hugoLionComment">Comment</div>
           </div>
+          <img class="notation-icon" id="lionNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2779,6 +2943,7 @@ Prioritizes heroes.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2804,6 +2969,7 @@ Prioritizes heroes.
             </div>
             <div class="patch-ability-desc" id="hugoLoneDruidComment">Comment</div>
           </div>
+          <img class="notation-icon" id="loneDruidNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2828,6 +2994,7 @@ ground targeted, increases stun duration from 0.8 to 1.1 and grants you
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2853,6 +3020,7 @@ ground targeted, increases stun duration from 0.8 to 1.1 and grants you
             </div>
             <div class="patch-ability-desc" id="hugoLunaComment">Comment</div>
           </div>
+          <img class="notation-icon" id="lunaNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2876,6 +3044,7 @@ ground targeted, increases stun duration from 0.8 to 1.1 and grants you
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2901,6 +3070,7 @@ ground targeted, increases stun duration from 0.8 to 1.1 and grants you
             </div>
             <div class="patch-ability-desc" id="hugoLycanComment">Comment</div>
           </div>
+          <img class="notation-icon" id="lycanNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2930,6 +3100,7 @@ seconds in the air and take 150 damage on landing and are stunned for
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -2955,6 +3126,7 @@ seconds in the air and take 150 damage on landing and are stunned for
             </div>
             <div class="patch-ability-desc" id="hugoMagnataurComment">Comment</div>
           </div>
+          <img class="notation-icon" id="magnataurNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -2986,6 +3158,7 @@ attacks.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3011,6 +3184,7 @@ attacks.
             </div>
             <div class="patch-ability-desc" id="hugoMarsComment">Comment</div>
           </div>
+          <img class="notation-icon" id="marsNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3031,6 +3205,7 @@ Snake is sent back towards the enemy. Cooldown: 12.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3056,6 +3231,7 @@ Snake is sent back towards the enemy. Cooldown: 12.
             </div>
             <div class="patch-ability-desc" id="hugoMedusaComment">Comment</div>
           </div>
+          <img class="notation-icon" id="medusaNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3085,6 +3261,7 @@ dealing 20 DPS for 4 seconds. Instances from different Meepos stack.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3110,6 +3287,7 @@ dealing 20 DPS for 4 seconds. Instances from different Meepos stack.
             </div>
             <div class="patch-ability-desc" id="hugoMeepoComment">Comment</div>
           </div>
+          <img class="notation-icon" id="meepoNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3132,6 +3310,7 @@ along the travel path (only active on the primary arrow). Drops a second
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3157,6 +3336,7 @@ along the travel path (only active on the primary arrow). Drops a second
             </div>
             <div class="patch-ability-desc" id="hugoMiranaComment">Comment</div>
           </div>
+          <img class="notation-icon" id="miranaNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3178,6 +3358,7 @@ along the travel path (only active on the primary arrow). Drops a second
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3203,6 +3384,7 @@ along the travel path (only active on the primary arrow). Drops a second
             </div>
             <div class="patch-ability-desc" id="hugoMonkeyKingComment">Comment</div>
           </div>
+          <img class="notation-icon" id="monkeyKingNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3223,6 +3405,7 @@ two different abilities. Prioritizes enemy heroes.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3248,6 +3431,7 @@ two different abilities. Prioritizes enemy heroes.
             </div>
             <div class="patch-ability-desc" id="hugoMorphlingComment">Comment</div>
           </div>
+          <img class="notation-icon" id="morphlingNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3274,6 +3458,7 @@ only hit by one instance. Cooldown: 15. Manacost: 75.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3299,6 +3484,7 @@ only hit by one instance. Cooldown: 15. Manacost: 75.
             </div>
             <div class="patch-ability-desc" id="hugoNagaSirenComment">Comment</div>
           </div>
+          <img class="notation-icon" id="nagaSirenNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3324,6 +3510,7 @@ only hit by one instance. Cooldown: 15. Manacost: 75.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3349,6 +3536,7 @@ only hit by one instance. Cooldown: 15. Manacost: 75.
             </div>
             <div class="patch-ability-desc" id="hugoFurionComment">Comment</div>
           </div>
+          <img class="notation-icon" id="furionNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3370,6 +3558,7 @@ Manacost: 150.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3395,6 +3584,7 @@ Manacost: 150.
             </div>
             <div class="patch-ability-desc" id="hugoNecrolyteComment">Comment</div>
           </div>
+          <img class="notation-icon" id="necrolyteNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3417,6 +3607,7 @@ non-player units. Cooldown: 20
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3442,6 +3633,7 @@ non-player units. Cooldown: 20
             </div>
             <div class="patch-ability-desc" id="hugoNightStalkerComment">Comment</div>
           </div>
+          <img class="notation-icon" id="nightStalkerNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3465,6 +3657,7 @@ Vendetta movement speed by 40%, unlocking max speed.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3490,6 +3683,7 @@ Vendetta movement speed by 40%, unlocking max speed.
             </div>
             <div class="patch-ability-desc" id="hugoNyxAssassinComment">Comment</div>
           </div>
+          <img class="notation-icon" id="nyxAssassinNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3517,6 +3711,7 @@ dealing 125 damage. Lasts 25 seconds. Can be Multicast. Cast Range: 600.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3542,6 +3737,7 @@ dealing 125 damage. Lasts 25 seconds. Can be Multicast. Cast Range: 600.
             </div>
             <div class="patch-ability-desc" id="hugoOgreMagiComment">Comment</div>
           </div>
+          <img class="notation-icon" id="ogreMagiNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3563,6 +3759,7 @@ equal to 25 plus 150% of your base damage. You are healed for the amount
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3588,6 +3785,7 @@ equal to 25 plus 150% of your base damage. You are healed for the amount
             </div>
             <div class="patch-ability-desc" id="hugoOmniknightComment">Comment</div>
           </div>
+          <img class="notation-icon" id="omniknightNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3607,6 +3805,7 @@ equal to 25 plus 150% of your base damage. You are healed for the amount
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3632,6 +3831,7 @@ equal to 25 plus 150% of your base damage. You are healed for the amount
             </div>
             <div class="patch-ability-desc" id="hugoOracleComment">Comment</div>
           </div>
+          <img class="notation-icon" id="oracleNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3670,6 +3870,7 @@ transfers 75% of the respective values. Cooldown: 45
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3695,6 +3896,7 @@ transfers 75% of the respective values. Cooldown: 45
             </div>
             <div class="patch-ability-desc" id="hugoObsidianDestroyerComment">Comment</div>
           </div>
+          <img class="notation-icon" id="obsidianDestroyerNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3723,6 +3925,7 @@ enemies in the way. Cooldown: 30
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3748,6 +3951,7 @@ enemies in the way. Cooldown: 30
             </div>
             <div class="patch-ability-desc" id="hugoPangolierComment">Comment</div>
           </div>
+          <img class="notation-icon" id="pangolierNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3773,6 +3977,7 @@ Manacost: 125.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3798,6 +4003,7 @@ Manacost: 125.
             </div>
             <div class="patch-ability-desc" id="hugoPhantomAssassinComment">Comment</div>
           </div>
+          <img class="notation-icon" id="phantomAssassinNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3827,6 +4033,7 @@ Spirit Lance Illusion damage by +20%.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3852,6 +4059,7 @@ Spirit Lance Illusion damage by +20%.
             </div>
             <div class="patch-ability-desc" id="hugoPhantomLancerComment">Comment</div>
           </div>
+          <img class="notation-icon" id="phantomLancerNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3873,6 +4081,7 @@ Spirit Lance Illusion damage by +20%.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3898,6 +4107,7 @@ Spirit Lance Illusion damage by +20%.
             </div>
             <div class="patch-ability-desc" id="hugoPhoenixComment">Comment</div>
           </div>
+          <img class="notation-icon" id="phoenixNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3926,6 +4136,7 @@ for 5 seconds.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -3951,6 +4162,7 @@ for 5 seconds.
             </div>
             <div class="patch-ability-desc" id="hugoPuckComment">Comment</div>
           </div>
+          <img class="notation-icon" id="puckNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -3978,6 +4190,7 @@ second. Has half cooldown when used on allies.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4003,6 +4216,7 @@ second. Has half cooldown when used on allies.
             </div>
             <div class="patch-ability-desc" id="hugoPudgeComment">Comment</div>
           </div>
+          <img class="notation-icon" id="pudgeNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4024,6 +4238,7 @@ duration runs out.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4049,6 +4264,7 @@ duration runs out.
             </div>
             <div class="patch-ability-desc" id="hugoPugnaComment">Comment</div>
           </div>
+          <img class="notation-icon" id="pugnaNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4071,6 +4287,7 @@ you blink at both your starting and ending location. Deals 150 damage in
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4096,6 +4313,7 @@ you blink at both your starting and ending location. Deals 150 damage in
             </div>
             <div class="patch-ability-desc" id="hugoQueenofpainComment">Comment</div>
           </div>
+          <img class="notation-icon" id="queenofpainNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4119,6 +4337,7 @@ Deals 120 Damage and slows them by 50% for 1.5 seconds.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4144,6 +4363,7 @@ Deals 120 Damage and slows them by 50% for 1.5 seconds.
             </div>
             <div class="patch-ability-desc" id="hugoRazorComment">Comment</div>
           </div>
+          <img class="notation-icon" id="razorNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4171,6 +4391,7 @@ Cast Range: 1200. Manacost: 125
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4196,6 +4417,7 @@ Cast Range: 1200. Manacost: 125
             </div>
             <div class="patch-ability-desc" id="hugoRikiComment">Comment</div>
           </div>
+          <img class="notation-icon" id="rikiNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4223,6 +4445,7 @@ cooldown is reduced by 30% when targeting allies. Throw delay is reduced
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4248,6 +4471,7 @@ cooldown is reduced by 30% when targeting allies. Throw delay is reduced
             </div>
             <div class="patch-ability-desc" id="hugoRubickComment">Comment</div>
           </div>
+          <img class="notation-icon" id="rubickNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4268,6 +4492,7 @@ cooldown is reduced by 30% when targeting allies. Throw delay is reduced
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4293,6 +4518,7 @@ cooldown is reduced by 30% when targeting allies. Throw delay is reduced
             </div>
             <div class="patch-ability-desc" id="hugoSandKingComment">Comment</div>
           </div>
+          <img class="notation-icon" id="sandKingNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4314,6 +4540,7 @@ cast on allies, continuously dispelling them and healing them at the end
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4339,6 +4566,7 @@ cast on allies, continuously dispelling them and healing them at the end
             </div>
             <div class="patch-ability-desc" id="hugoShadowDemonComment">Comment</div>
           </div>
+          <img class="notation-icon" id="shadowDemonNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4358,6 +4586,7 @@ cast on allies, continuously dispelling them and healing them at the end
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4383,6 +4612,7 @@ cast on allies, continuously dispelling them and healing them at the end
             </div>
             <div class="patch-ability-desc" id="hugoNevermoreComment">Comment</div>
           </div>
+          <img class="notation-icon" id="nevermoreNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4405,6 +4635,7 @@ by 150. Wards last 8 seconds.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4430,6 +4661,7 @@ by 150. Wards last 8 seconds.
             </div>
             <div class="patch-ability-desc" id="hugoShadowShamanComment">Comment</div>
           </div>
+          <img class="notation-icon" id="shadowShamanNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4450,6 +4682,7 @@ Bounce range is 600 unit to unit.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4475,6 +4708,7 @@ Bounce range is 600 unit to unit.
             </div>
             <div class="patch-ability-desc" id="hugoSilencerComment">Comment</div>
           </div>
+          <img class="notation-icon" id="silencerNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4492,6 +4726,7 @@ Bounce range is 600 unit to unit.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4517,6 +4752,7 @@ Bounce range is 600 unit to unit.
             </div>
             <div class="patch-ability-desc" id="hugoSkywrathMageComment">Comment</div>
           </div>
+          <img class="notation-icon" id="skywrathMageNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4539,6 +4775,7 @@ Bounce range is 600 unit to unit.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4564,6 +4801,7 @@ Bounce range is 600 unit to unit.
             </div>
             <div class="patch-ability-desc" id="hugoSlardarComment">Comment</div>
           </div>
+          <img class="notation-icon" id="slardarNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4588,6 +4826,7 @@ Pounce. Cast range: 1100. Manacost: 100. Cooldown: 20.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4613,6 +4852,7 @@ Pounce. Cast range: 1100. Manacost: 100. Cooldown: 20.
             </div>
             <div class="patch-ability-desc" id="hugoSlarkComment">Comment</div>
           </div>
+          <img class="notation-icon" id="slarkNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4638,6 +4878,7 @@ damage and be stunned for 1.5 seconds.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4663,6 +4904,7 @@ damage and be stunned for 1.5 seconds.
             </div>
             <div class="patch-ability-desc" id="hugoSnapfireComment">Comment</div>
           </div>
+          <img class="notation-icon" id="snapfireNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4686,6 +4928,7 @@ for 3 seconds. Radius: 375. Cast Range: 550. Cooldown: 20. Manacost: 75
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4711,6 +4954,7 @@ for 3 seconds. Radius: 375. Cast Range: 550. Cooldown: 20. Manacost: 75
             </div>
             <div class="patch-ability-desc" id="hugoSniperComment">Comment</div>
           </div>
+          <img class="notation-icon" id="sniperNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4737,6 +4981,7 @@ in the last 5 seconds. Illusion lasts 5 seconds. Cooldown: 25. Manacost:
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4762,6 +5007,7 @@ in the last 5 seconds. Illusion lasts 5 seconds. Cooldown: 25. Manacost:
             </div>
             <div class="patch-ability-desc" id="hugoSpectreComment">Comment</div>
           </div>
+          <img class="notation-icon" id="spectreNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4784,6 +5030,7 @@ apply Break for 4 seconds. You are Spell Immune during the cast delay.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4809,6 +5056,7 @@ apply Break for 4 seconds. You are Spell Immune during the cast delay.
             </div>
             <div class="patch-ability-desc" id="hugoSpiritBreakerComment">Comment</div>
           </div>
+          <img class="notation-icon" id="spiritBreakerNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4834,6 +5082,7 @@ Manacost: 150. Additionally, passively provides 40 Attack Speed to Storm
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4859,6 +5108,7 @@ Manacost: 150. Additionally, passively provides 40 Attack Speed to Storm
             </div>
             <div class="patch-ability-desc" id="hugoStormSpiritComment">Comment</div>
           </div>
+          <img class="notation-icon" id="stormSpiritNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4880,6 +5130,7 @@ Manacost: 150. Additionally, passively provides 40 Attack Speed to Storm
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4905,6 +5156,7 @@ Manacost: 150. Additionally, passively provides 40 Attack Speed to Storm
             </div>
             <div class="patch-ability-desc" id="hugoSvenComment">Comment</div>
           </div>
+          <img class="notation-icon" id="svenNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4922,6 +5174,7 @@ Manacost: 150. Additionally, passively provides 40 Attack Speed to Storm
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4947,6 +5200,7 @@ Manacost: 150. Additionally, passively provides 40 Attack Speed to Storm
             </div>
             <div class="patch-ability-desc" id="hugoTechiesComment">Comment</div>
           </div>
+          <img class="notation-icon" id="techiesNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -4971,6 +5225,7 @@ been charged. Minimum 0.5 duration.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -4996,6 +5251,7 @@ been charged. Minimum 0.5 duration.
             </div>
             <div class="patch-ability-desc" id="hugoTemplarAssassinComment">Comment</div>
           </div>
+          <img class="notation-icon" id="templarAssassinNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5024,6 +5280,7 @@ Cooldown: 14.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5049,6 +5306,7 @@ Cooldown: 14.
             </div>
             <div class="patch-ability-desc" id="hugoTerrorbladeComment">Comment</div>
           </div>
+          <img class="notation-icon" id="terrorbladeNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5070,6 +5328,7 @@ Cooldown: 14.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5095,6 +5354,7 @@ Cooldown: 14.
             </div>
             <div class="patch-ability-desc" id="hugoTidehunterComment">Comment</div>
           </div>
+          <img class="notation-icon" id="tidehunterNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5122,6 +5382,7 @@ Manacost: 100.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5147,6 +5408,7 @@ Manacost: 100.
             </div>
             <div class="patch-ability-desc" id="hugoShredderComment">Comment</div>
           </div>
+          <img class="notation-icon" id="shredderNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5173,6 +5435,7 @@ Cooldown: 30. Manacost: 100.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5198,6 +5461,7 @@ Cooldown: 30. Manacost: 100.
             </div>
             <div class="patch-ability-desc" id="hugoTinkerComment">Comment</div>
           </div>
+          <img class="notation-icon" id="tinkerNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5224,6 +5488,7 @@ affect Spell Immune enemies.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5249,6 +5514,7 @@ affect Spell Immune enemies.
             </div>
             <div class="patch-ability-desc" id="hugoTinyComment">Comment</div>
           </div>
+          <img class="notation-icon" id="tinyNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5270,6 +5536,7 @@ Cooldown: 10
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5295,6 +5562,7 @@ Cooldown: 10
             </div>
             <div class="patch-ability-desc" id="hugoTreantComment">Comment</div>
           </div>
+          <img class="notation-icon" id="treantNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5315,6 +5583,7 @@ Cooldown: 10
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5340,6 +5609,7 @@ Cooldown: 10
             </div>
             <div class="patch-ability-desc" id="hugoTrollWarlordComment">Comment</div>
           </div>
+          <img class="notation-icon" id="trollWarlordNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5362,6 +5632,7 @@ Manacost: 100.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5387,6 +5658,7 @@ Manacost: 100.
             </div>
             <div class="patch-ability-desc" id="hugoTuskComment">Comment</div>
           </div>
+          <img class="notation-icon" id="tuskNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5409,6 +5681,7 @@ point by half.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5434,6 +5707,7 @@ point by half.
             </div>
             <div class="patch-ability-desc" id="hugoAbyssalUnderlordComment">Comment</div>
           </div>
+          <img class="notation-icon" id="abyssalUnderlordNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5457,6 +5731,7 @@ point by half.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5482,6 +5757,7 @@ point by half.
             </div>
             <div class="patch-ability-desc" id="hugoUndyingComment">Comment</div>
           </div>
+          <img class="notation-icon" id="undyingNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5503,6 +5779,7 @@ point by half.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5528,6 +5805,7 @@ point by half.
             </div>
             <div class="patch-ability-desc" id="hugoUrsaComment">Comment</div>
           </div>
+          <img class="notation-icon" id="ursaNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5561,6 +5839,7 @@ will take its place. XP earned by your illusion is given to your hero.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5586,6 +5865,7 @@ will take its place. XP earned by your illusion is given to your hero.
             </div>
             <div class="patch-ability-desc" id="hugoVengefulspiritComment">Comment</div>
           </div>
+          <img class="notation-icon" id="vengefulspiritNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5605,6 +5885,7 @@ will take its place. XP earned by your illusion is given to your hero.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5630,6 +5911,7 @@ will take its place. XP earned by your illusion is given to your hero.
             </div>
             <div class="patch-ability-desc" id="hugoVenomancerComment">Comment</div>
           </div>
+          <img class="notation-icon" id="venomancerNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5649,6 +5931,7 @@ will take its place. XP earned by your illusion is given to your hero.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5674,6 +5957,7 @@ will take its place. XP earned by your illusion is given to your hero.
             </div>
             <div class="patch-ability-desc" id="hugoViperComment">Comment</div>
           </div>
+          <img class="notation-icon" id="viperNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5700,6 +5984,7 @@ Manacost: 100
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5725,6 +6010,7 @@ Manacost: 100
             </div>
             <div class="patch-ability-desc" id="hugoVisageComment">Comment</div>
           </div>
+          <img class="notation-icon" id="visageNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5743,6 +6029,7 @@ Manacost: 100
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5768,6 +6055,7 @@ Manacost: 100
             </div>
             <div class="patch-ability-desc" id="hugoVoidSpiritComment">Comment</div>
           </div>
+          <img class="notation-icon" id="voidSpiritNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5786,6 +6074,7 @@ Manacost: 100
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5811,6 +6100,7 @@ Manacost: 100
             </div>
             <div class="patch-ability-desc" id="hugoWarlockComment">Comment</div>
           </div>
+          <img class="notation-icon" id="warlockNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5832,6 +6122,7 @@ target that have Beetles attached to them. Reduces The Swarm cooldown by
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5857,6 +6148,7 @@ target that have Beetles attached to them. Reduces The Swarm cooldown by
             </div>
             <div class="patch-ability-desc" id="hugoWeaverComment">Comment</div>
           </div>
+          <img class="notation-icon" id="weaverNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5879,6 +6171,7 @@ powershot channel duration.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5904,6 +6197,7 @@ powershot channel duration.
             </div>
             <div class="patch-ability-desc" id="hugoWindrunnerComment">Comment</div>
           </div>
+          <img class="notation-icon" id="windrunnerNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5926,6 +6220,7 @@ powershot channel duration.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5951,6 +6246,7 @@ powershot channel duration.
             </div>
             <div class="patch-ability-desc" id="hugoWinterWyvernComment">Comment</div>
           </div>
+          <img class="notation-icon" id="winterWyvernNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -5971,6 +6267,7 @@ Manacost: 250.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -5996,6 +6293,7 @@ Manacost: 250.
             </div>
             <div class="patch-ability-desc" id="hugoWitchDoctorComment">Comment</div>
           </div>
+          <img class="notation-icon" id="witchDoctorNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -6023,6 +6321,7 @@ skeletons (same numbers as when it was on Mortal Strike). Skeletons also
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -6048,6 +6347,7 @@ skeletons (same numbers as when it was on Mortal Strike). Skeletons also
             </div>
             <div class="patch-ability-desc" id="hugoSkeletonKingComment">Comment</div>
           </div>
+          <img class="notation-icon" id="skeletonKingNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->
@@ -6075,6 +6375,7 @@ Cooldown: 14. Manacost: 100.
             <div class="shard-icon" id="avis"></div>
             <div class="shard-ability-label">L'avis des experts</div>
           </div>
+        <div class="avis-container">
           <div class="shard-ability">
             <div class="shard-ability-name">
               <div class="patch-ability-name">Youyou</div>
@@ -6100,6 +6401,7 @@ Cooldown: 14. Manacost: 100.
             </div>
             <div class="patch-ability-desc" id="hugoZuusComment">Comment</div>
           </div>
+          <img class="notation-icon" id="zuusNotationIcon">
         </div>
       </div>
       <!-- My code finishes here -->

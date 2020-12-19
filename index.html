@@ -73,9 +73,8 @@
           acc[cle] = [];
         }
 
-        if (obj.note && obj.note !== 0) {
-          acc[cle].push(obj.note);
-        }
+        acc[cle].push(obj.note);
+
         return acc;
       }, {});
     }
@@ -89,7 +88,7 @@
         const numberOfNotes = groupedNotes[hero].length;
 
         var finalScore = 0;
-        if (numberOfNotes > 1) {
+        if (numberOfNotes > 0) {
           const totalScore = groupedNotes[hero].reduce((a, b) => a + b, 0);
           finalScore = totalScore / numberOfNotes;
         }
@@ -102,9 +101,9 @@
           } else if (finalScore > 3.5) {
           document.querySelector(notationSelector).src="assets/pogchamp.png";
           document.querySelector(notationSelector).style.transform = "scaleX(-1)";
-         } else if (finalScore > 0 && finalScore < 1.2) {
+         } else if (finalScore < 0.6) {
           document.querySelector(notationSelector).src="assets/frgcry.png";
-         } else if (finalScore > 0 && finalScore < 2) {
+         } else if (finalScore < 1.6) {
           document.querySelector(notationSelector).src="assets/LUL.png";
          } else {
           document.querySelector(notationSelector).style.visibility = 'hidden';

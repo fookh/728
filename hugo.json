@@ -1,397 +1,397 @@
 { "abaddon":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 5
+    { "title": "Nul mais..."
+    , "comment": "Clairement, il y a un build. Shield + coil + echo sabre = silence."
+    , "note": 2
     }
 , "alchemist":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 1
+    { "title": "Fort"
+    , "comment": "Fort, versatile (carry ou support), pas besoin de slot. C'est cool."
+    , "note": 4
     }
 , "ancientApparition":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "Nul et..."
+    , "comment": "Je n'ai même pas réussi à trouver de build fort avec... quoique avec radiance..."
     , "note": 0
     }
 , "antimage":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Fort"
+    , "comment": "Fort, tout particulièrement le passage du coût en mana à 0."
+    , "note": 4
     }
 , "arcWarden":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Broken?"
+    , "comment": "Tout à l'air fort. La magic resistance en bonus, c'est gratos !"
+    , "note": 5
     }
 , "axe":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Nul mais..."
+    , "comment": "Il y a clairement un build. Je l'ai juste pas encore trouvé."
+    , "note": 1
     }
 , "bane":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "J'adore mais..."
+    , "comment": "C'est probablement nul. Mais le concept est génial ET il y a un build."
+    , "note": 1
     }
 , "batrider":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Excellent"
+    , "comment": "Core dans une game tendu, j'aurai adoré voir Cloud9 jouer avec ce shard !"
+    , "note": 5
     }
 , "beastmaster":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "Nul à chier"
+    , "comment": "Les valeurs sont faibles, on ne peut même plus avoir plusieurs hawks..."
     , "note": 0
     }
 , "bloodseeker":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Fort"
+    , "comment": "Ca a l'air fort dans certaines situations, mais ca n'aide que le BS carry du coup c'est nul (pour l'instant)"
+    , "note": 2
     }
 , "bountyHunter":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Core"
+    , "comment": "Ca me parait obligatoire dans le tool d'un bounty hunter moderne."
+    , "note": 4
     }
 , "brewmaster":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Broken"
+    , "comment": "1400 gold pour un autre panda qui SLOW ET DISARM ET FAIT MAL ET COURS MEGA VITE ?"
+    , "note": 5
     }
 , "bristleback":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Stylé"
+    , "comment": "C'est vraiment cool. A voir à quel point tu peux intégrer ca dans ton BO mais pour 1400 gold ca donne envie!"
+    , "note": 4
     }
 , "broodmother":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Hmmm..."
+    , "comment": "Est-ce que ca peut remplacer les diffus pour récupérer des solo kills très tôt ? Limite first item ?"
+    , "note": 4
     }
 , "centaur":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Mouais"
+    , "comment": "Il doit y avoir un build, mais la cast range du double edge va vite être un problème."
+    , "note": 2
     }
 , "chaosKnight":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Nul à chier"
+    , "comment": "Vu l'attaque speed du CK, je vois pas trop comment l'illu a le temps de deal. Et il faut que ton stun connecte en plus."
+    , "note": 1
     }
 , "chen":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "CLOUD NINE"
+    , "comment": "Quelle horreur ce spell. Tu peux BKB après et c'est impossible à cancel 😬"
+    , "note": 5
     }
 , "clinkz":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Core"
+    , "comment": "Très fort, pas cher. A voir à quel moment tu le squeeze"
+    , "note": 4
     }
 , "rattletrap":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Génial!!!"
+    , "comment": "Aucune idée si c'est fort, mais l'idée est génial!"
+    , "note": 5
     }
 , "crystalMaiden":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Broken en late"
+    , "comment": "Au 25, 5s de CD pour 4.25s de durée. Rend le cancel d'ulti très dur. Méga stylé mais pas en first item"
+    , "note": 4
     }
 , "darkSeer":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Nul mais..."
+    , "comment": "Il y a un build. Clairement. Dommage que l'illu fasse zéro dégats."
+    , "note": 1
     }
 , "darkWillow":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Stylé"
+    , "comment": "Très fort en late, notamment avec le talent 20 de CDR."
+    , "note": 4
     }
 , "dazzle":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Nul à chier mais..."
+    , "comment": "il y a un build !"
+    , "note": 1
     }
 , "deathProphet":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Méga fort"
+    , "comment": "DP adore l'armure + buff dégat de l'exorcism. Core après BKB quand tu peux drain."
+    , "note": 4
     }
 , "disruptor":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "Stylé"
+    , "comment": "Super sympa dans les strats shield avec Dark seer par exemple"
     , "note": 0
     }
 , "doomBringer":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Broken en late"
+    , "comment": "1.8s de stun toutes les 4 secondes ? En plus des dégats monstrueux en %HP ?"
+    , "note": 5
     }
 , "dragonKnight":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Sympa"
+    , "comment": "Bon tool de farm & dps, pas cher. Potentielement core item de farm ?"
+    , "note": 4
     }
 , "drowRanger":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Pas mal"
+    , "comment": "A tester mais ca peut-être très fort. Contre aux illus ?"
+    , "note": 3
     }
 , "earthSpirit":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Broken"
+    , "comment": "Tool de vision + cailloux illimités. Trop cool!"
+    , "note": 5
     }
 , "earthshaker":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Génial"
+    , "comment": "Alors, d'une part il y a un build. Mais en plus c'est probablement très fort."
+    , "note": 4
     }
 , "elderTitan":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Très fort en late"
+    , "comment": "Vraiment tès agréable mais assez tard dans le build d'un titan core."
+    , "note": 4
     }
 , "emberSpirit":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "Mouais..."
+    , "comment": "Pas très inspiré, je vois pas dans quel situation ca t'aide vraiment"
     , "note": 0
     }
 , "enchantress":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Pas mal"
+    , "comment": "Sympa, il y a probablement un build intouchable"
+    , "note": 3
     }
 , "enigma":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Bonus"
+    , "comment": "L'AOE du pull est IMMENSE! Super kit pour completer le 6 slot enigma."
+    , "note": 4
     }
 , "facelessVoid":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "NINJA!!!!"
+    , "comment": "Pas sur que ca soit utile dans le build classique mais... il y a un build NINJA!"
+    , "note": 1
     }
 , "grimstroke":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Gratos"
+    , "comment": "Sympa, encore un spell à doubler avec son ulti. Les valeurs sont pas oufs"
+    , "note": 3
     }
 , "gyrocopter":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Broken ?"
+    , "comment": "Core si le héros revient. La barrière des 20 min fait chier"
+    , "note": 4
     }
 , "huskar":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Sympa mais..."
+    , "comment": "ca sert à rien pour le moment. Il y a un build qui arrive mais y est pas encore tout à fait"
+    , "note": 2
     }
 , "invoker":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Très fort"
+    , "comment": "Meilleur sort du héros, permet de setup tout le reste. La cast range + la facilité à le placer..."
+    , "note": 4
     }
 , "wisp":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "Nul à chier ?"
+    , "comment": "C'est quasiment impossible de trigger le stun. Il doit y avoir des combos (bristleback ?)"
     , "note": 0
     }
 , "jakiro":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Nul à chier mais"
+    , "comment": "c'est cool d'avoir liquid fire et liquid frost ! Mais c'est nul à chier."
+    , "note": 1
     }
 , "juggernaut":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Mouais"
+    , "comment": "Bien dans le build nul du jugger. Donc nul."
+    , "note": 1
     }
 , "keeperOfTheLight":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Très fort!"
+    , "comment": "Team Liquid a gagné un TI avec cette strat. Dispo pour 1400 gold maintenant, ca donne des idées!"
+    , "note": 5
     }
 , "kunkka":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "Nul ?"
+    , "comment": "Il y a peut-être un build mais les valeurs sont vraiment nulles."
     , "note": 0
     }
 , "legionCommander":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Nul ?"
+    , "comment": "Apporte un peu de dégat AOE mais c'est pas le principe du héros."
+    , "note": 1
     }
 , "leshrac":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "Interêt ?"
+    , "comment": "Il doit y avoir un moyen de s'en servir mais ca a l'air nul. A chier."
     , "note": 0
     }
 , "lich":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Mega stylé"
+    , "comment": "Slow AOE + buff ulti + ward gratos"
+    , "note": 4
     }
 , "lifeStealer":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "???"
+    , "comment": "J'ai pas lu les autres changements donc c'est dur à dire :D"
+    , "note": 3
     }
 , "lina":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Core"
+    , "comment": "Incroyable dès que tu as tes premiers items de sustain. Core dans toutes les positions."
+    , "note": 5
     }
 , "lion":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "Nul mais..."
+    , "comment": "Là il y a clairement un build. frgKing."
     , "note": 0
     }
 , "loneDruid":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Pas ouf"
+    , "comment": "Les stats sont OK mais c'est sur ton spell de survie que tu veux pas gacher n'importe comment"
+    , "note": 2
     }
 , "luna":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Stylé et..."
+    , "comment": "il y a un build ! Je prend."
+    , "note": 4
     }
 , "lycan":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Pas inspiré"
+    , "comment": "C'est pas nul mais on se fait chier..."
+    , "note": 2
     }
 , "magnataur":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Mega stylé"
+    , "comment": "Trop cool pour faire des combos !"
+    , "note": 4
     }
 , "mars":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Très fort"
+    , "comment": "Ulti jakiro gratos qui slow ? Allez. Core assez vite mais j'ai jamais joué ce héros."
+    , "note": 5
     }
 , "medusa":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "Nul. Nul. Nul."
+    , "comment": "1 SNAKE. TOUTES LES 12 SECONDES. QUI NE BOUNCE PAS."
     , "note": 0
     }
 , "meepo":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Hmm..."
+    , "comment": "J'ai toujours pas lu les autres changements donc..."
+    , "note": 3
     }
 , "mirana":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Borderline"
+    , "comment": "Très sympa, la mirana core est pas trop au gout du jour mais un petit buff et ca peut aller vite!"
+    , "note": 5
     }
 , "monkeyKing":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "Trop stylé et..."
+    , "comment": "il y a clairement un build !"
     , "note": 0
     }
 , "morphling":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "???"
+    , "comment": "On peut virer ce héros du jeu svp ?"
+    , "note": 1
     }
 , "nagaSiren":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Trop cool"
+    , "comment": "Trop content de voir ce spell revenir !"
+    , "note": 4
     }
 , "furion":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Excellent !"
+    , "comment": "Le concept est génial et c'est probablement fort!"
+    , "note": 4
     }
 , "necrolyte":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Meeeh"
+    , "comment": "Pas sur que ca soit très fort, à voir"
+    , "note": 2
     }
 , "nightStalker":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "OK"
+    , "comment": "Pourquoi pas, mais loin d'être gamebreaking."
+    , "note": 2
     }
 , "nyxAssassin":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Très stylé!"
+    , "comment": "Ca donne très envie sur les nyx à l'ancienne, plutôt p3. A tester."
+    , "note": 4
     }
 , "ogreMagi":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": ":|"
+    , "comment": "C'est décevant..."
+    , "note": 1
     }
 , "omniknight":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Il y a"
+    , "comment": "un build!"
+    , "note": 3
     }
 , "oracle":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Mouais"
+    , "comment": "Pas très inspiré"
+    , "note": 2
     }
 , "obsidianDestroyer":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "Nul"
+    , "comment": "On aurait pu faire pire ?"
     , "note": 0
     }
 , "pangolier":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Trop cool et"
+    , "comment": "probablement très fort même si dur à utiliser!"
+    , "note": 5
     }
 , "phantomAssassin":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Stylé mais"
+    , "comment": "inutile. Ca n'est pas basé sur/n'augmente pas ton DPS. Le break est sympa."
+    , "note": 1
     }
 , "phantomLancer":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Nul mais"
+    , "comment": "il y a peut-être un build ?"
+    , "note": 1
     }
 , "phoenix":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Pffff"
+    , "comment": "On se fait chier... C'est pas nul mais c'est booooring!"
+    , "note": 2
     }
 , "puck":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Core en late"
+    , "comment": "Gratuit, fort, combo avec agha. Super!"
+    , "note": 5
     }
 , "pudge":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "On se fait"
+    , "comment": "Chier."
+    , "note": 1
     }
 , "pugna":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Pas mal"
+    , "comment": "Très très très situational. A tester."
+    , "note": 3
     }
 , "queenofpain":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Fort"
+    , "comment": "Gratuit, fort à avoir en late"
+    , "note": 4
     }
 , "razor":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "Inutile"
+    , "comment": "Zéro"
     , "note": 0
     }
 , "riki":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "NINJAAAA"
+    , "comment": "Mega fort!"
+    , "note": 5
     }
 , "rubick":
     { "title": "titre à remplir"

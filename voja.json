@@ -1,417 +1,417 @@
 { "abaddon":
     { "title": "Satisfait"
-    , "comment": "Un paladin du dark side, Shard très cool"
-    , "note": 0
+    , "comment": "Combiné aux talents, ptet bien un Dark Paladin viable, attention aux anti-heal du patch"
+    , "note": 4
     }
 , "alchemist":
     { "title": "Inquiétant"
     , "comment": "Shard parait très très fort, transfert de gold aussi mais c'est bonus"
-    , "note": 0
+    , "note": 4
     }
 , "ancientApparition":
     { "title": "Mouais"
     , "comment": "C'est du buff gratos, mais pas emballé. Reste un anti-heal simple"
-    , "note": 0
+    , "note": 1
     }
 , "antimage":
     { "title": "I'm sorry what?"
     , "comment": "Tout m'a l'air très fort pour un héros qui avait pas besoin d'être plus fort X_X"
-    , "note": 0
+    , "note": 5
     }
 , "arcWarden":
     { "title": "Essai n°32"
     , "comment": "Encore une tentative pour faire autre chose du héros qu'un splitpusher. Apprécié, on verra"
-    , "note": 0
+    , "note": 2
     }
 , "axe":
     { "title": "Aghs Obligatoire?"
     , "comment": "Tout les changements essaient de pousser à faire Aghs & Shard, le héros a besoin de plus de gold now"
-    , "note": 0
+    , "note": 3
     }
 , "bane":
     { "title": "Confus"
-    , "comment": "Du retour en arrière, des changements chelous. J'aime le nouvel enfeeble sur la Cast speed ceci dit!"
-    , "note": 0
+    , "comment": "Du retour en arrière, des changements chelous que j'aime pas. Shard qui remonte la moyenne en sécurisant le grip"
+    , "note": 2
     }
 , "batrider":
     { "title": "BofRider"
     , "comment": "Le Dmg Output du héros prends un coup au moral, ses CDs aussi. Le Shard est ok-tier. Pas emballé"
-    , "note": 0
+    , "note": 1
     }
 , "beastmaster":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Wagner serait fier"
+    , "comment": "Marrant pour le coup, et potentiellement dangereux"
+    , "note": 3
     }
 , "bloodseeker":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "We Lifestealer now"
+    , "comment": "Fort, mais relou de cramer des golds la dedans non?"
+    , "note": 2
     }
 , "bountyHunter":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "OmegaTrack"
+    , "comment": "Le héros fait assez de thune, l'ajout est intéressant"
+    , "note": 3
     }
 , "brewmaster":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Pas trop tôt"
+    , "comment": "De vrais buffs sur le héros, et un shard qui va avec!"
+    , "note": 5
     }
 , "bristleback":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Morve pour tous"
+    , "comment": "Les buffs sont OK, le Shard est niche avec mass CDR, rien de ouf ceci dit"
+    , "note": 2
     }
 , "broodmother":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Cay Supayr"
+    , "comment": "Shard pas ouf, héros pas ouf, nextPLZ"
+    , "note": 1
     }
 , "centaur":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "We Strong now"
+    , "comment": "J'aime bien, il peut le build et ca force un jeu aggressif!"
+    , "note": 3
     }
 , "chaosKnight":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "....Ok"
+    , "comment": "Woaw"
+    , "note": 1
     }
 , "chen":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "New Player : Dendi"
+    , "comment": "C'est back! Et c'est cool"
+    , "note": 3
     }
 , "clinkz":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Décevant"
+    , "comment": "Ptet que c'est fort, mais ca ajoute rien au gameplay"
+    , "note": 2
     }
 , "rattletrap":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Im Flying Jack"
+    , "comment": "Best. Shard. Ever."
+    , "note": 5
     }
 , "crystalMaiden":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Mr Freeze"
+    , "comment": "Mouais, pas convaincu par le truc"
+    , "note": 2
     }
 , "darkSeer":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Dark Tyson"
+    , "comment": "Depuis le temps que j'en rêve."
+    , "note": 5
     }
 , "darkWillow":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Flower Power"
+    , "comment": "Un mini contre aux dispells, j'aime l'idée"
+    , "note": 3
     }
 , "dazzle":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "En avant et en arrière"
+    , "comment": "On repasse a l'ancien agha et on file l'agha en shard, buffs forts mais shard nul"
+    , "note": 1
     }
 , "deathProphet":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Gonna have your armor"
+    , "comment": "Clairement un bon shard. Tout ce que le héros veut"
+    , "note": 4
     }
 , "disruptor":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Beep Beep"
+    , "comment": "Un chouette shard stéroide, passe over bkb ?"
+    , "note": 3
     }
 , "doomBringer":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Maths? Oh god"
+    , "comment": "Le shard est OK, couplé avec le nouvel aghs c'est encore une source de break et CC"
+    , "note": 4
     }
 , "dragonKnight":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Jte cuit une tranche?"
+    , "comment": "OMEGABARBEC. 20 sec de cd? god, ca me parait strong"
+    , "note": 4
     }
 , "drowRanger":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Boom de froid"
+    , "comment": "Une option anti-heal/regen, je doute qu'on voit ça"
+    , "note": 2
     }
 , "earthSpirit":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Watchers 2.0"
+    , "comment": "Un Enorme tool de visu, du confort avec, et des changements cool. J'aime"
+    , "note": 5
     }
 , "earthshaker":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Craqué?!"
+    , "comment": "Rien ne remplace dagger, mais c'est un shard stylé pour jouer de loin"
+    , "note": 3
     }
 , "elderTitan":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "We Core Now"
+    , "comment": "Enfin un moyen d'aller au c-a-c facilement pour les ET Core"
+    , "note": 3
     }
 , "emberSpirit":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Radiance de poche"
+    , "comment": "Peut-être très fort pour farm? Un peu mitigé"
+    , "note": 3
     }
 , "enchantress":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Hey Listen"
+    , "comment": "Shard OKTier, changements sur Sproink tout cool"
+    , "note": 2
     }
 , "enigma":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Mouais"
+    , "comment": "Alors euh je comprends pas l'interet du truc. Voila caynul"
+    , "note": 1
     }
 , "facelessVoid":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Are you OK Annie"
+    , "comment": "Swag... Mais franchement pas ouf"
+    , "note": 1
     }
 , "grimstroke":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Il va faire tout noir"
+    , "comment": "DPS ok, disable OK, combo sur l'ulti, j'approuve"
+    , "note": 4
     }
 , "gyrocopter":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Ratatatatatatatatatata"
+    , "comment": "Ca continue a buff MagiCopter, Topson happy"
+    , "note": 3
     }
 , "huskar":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Why not"
+    , "comment": "Encore un anti-heal, mais pas sur que le héros dépense de la thune la dedans"
+    , "note": 2
     }
 , "invoker":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "We will build a Wall"
+    , "comment": "Franchement, pourquoi pas, avec le talent DPS dessus. Defense de Highground folle"
+    , "note": 3
     }
 , "wisp":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Aaaaaand we're back"
+    , "comment": "Le retour du Tether stun! Ca reste cher un Shard pour un Io non?"
+    , "note": 3
     }
 , "jakiro":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Y en a pour tout le monde"
+    , "comment": "Tete de Froid qui a enfin son Liquid fire équivalent. Le Dps sur max HP est très fort"
+    , "note": 4
     }
 , "juggernaut":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Toupie de la mort"
+    , "comment": "Un chouette buff sur un spell défensif en mid-late. Good buff pour le héros a ce moment la"
+    , "note": 4
     }
 , "keeperOfTheLight":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Invoker 2.0"
+    , "comment": "Le héros a 10 millions de spells now. Le shard est l'ancien aghs et a vu son utilité pendant des TI. Good"
+    , "note": 5
     }
 , "kunkka":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Les même qu'a Nice"
+    , "comment": "Un de mes favoris. Le spell est très cool, facile a use, petit CD et intéressant!"
+    , "note": 5
     }
 , "legionCommander":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Ovrewhel.. Ovreelwh.. Ovre.. ODDS"
+    , "comment": "Euh.. c'est joli mais c'est un peu naze non?"
+    , "note": 1
     }
 , "leshrac":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "And again.. And again.. And again"
+    , "comment": "Visuellement c'est un plaisir, je pense que le shard est OK et le nouvel agha très sympa!"
+    , "note": 4
     }
 , "lich":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Popsicle"
+    , "comment": "Les interactions avec le Shard sont cool, Ulti & Shield. 300hp c'est pas beaucoup par contre"
+    , "note": 3
     }
 , "lifeStealer":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Je connais ce spell, non?"
+    , "comment": "Ouais bon le shard c'est Open Wounds. Le nouvel Agha a l'air fort avec le CD de 25s"
+    , "note": 3
     }
 , "lina":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Hahaha AoE Zap"
+    , "comment": "Hahaha AoE Zap"
+    , "note": 5
     }
 , "lion":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Slow Slurp"
+    , "comment": "Mouais.. euh... c'est chouette.. enfin.."
+    , "note": 1
     }
 , "loneDruid":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Rwar"
+    , "comment": "Enfin un truc pas égoiste pour ce héros. la value du buff est très chouette et il peut le farm EZ"
+    , "note": 4
     }
 , "luna":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "For Selemenemenemeneme"
+    , "comment": "Le bonus de Mouvespeed est bienvenu. Le ground Target avec le talent castrange aussi, Me gusta"
+    , "note": 4
     }
 , "lycan":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Doggy Dog"
+    , "comment": "Et revoila les auto-doggos. Ca a presque cassé le jeu la dernière fois alors que ca avait l'air nul. J'ai peur"
+    , "note": 2
     }
 , "magnataur":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Aaaaaaaaaah"
+    , "comment": "Omg tout est trop bien. L'Agha est ouf et le shard est ouuuuuuuuuf <3 <3 <3"
+    , "note": 5
     }
 , "mars":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "More Kebabs"
+    , "comment": "L'aghs est peut être très très fort, je sais pas. Le Shard me parait un peu anecdotique toutefois"
+    , "note": 2
     }
 , "medusa":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Non c'est toi"
+    , "comment": "Ca me parait très fort sur le papier, j'ai un peu peur du truc"
+    , "note": 4
     }
 , "meepo":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Geostrike back, back again"
+    , "comment": "Le nouvel Aghs me parait vraiment fort, le Geostrike était assez dementiel en terme de DPS, bon buff"
+    , "note": 4
     }
 , "mirana":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Leap in"
+    , "comment": "Une volonté de jouer le leap offenssif en DPS Physique, un agha pour DPS magique. Y a de tout"
+    , "note": 4
     }
 , "monkeyKing":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Boing boing boing"
+    , "comment": "Alors pas sur du tout que ca mérite son prix, mais c'est marrant et utile"
+    , "note": 2
     }
 , "morphling":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "And for you, and for you..."
+    , "comment": "Un bon buff au lategame du héros, sera pas fait avant"
+    , "note": 2
     }
 , "nagaSiren":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Support again?"
+    , "comment": "Ptet un avenir pour la Naga support entre le talent, le shard et l'agha. J'aime beaucoup"
+    , "note": 4
     }
 , "furion":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Thou shall not pass"
+    , "comment": "J'adore le concept, c'est ptet pas mal nul mais j'adore"
+    , "note": 5
     }
 , "necrolyte":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "The big Head"
+    , "comment": "Pas persuadé que ce soit très fort vu le CD du spell et que ca ne bounce pas sur toi"
+    , "note": 2
     }
 , "nightStalker":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "For the night has come and is full of terror"
+    , "comment": "Fort mais ca arrive min 20+ donc pas forcément nécessaire d'avoir plein de sustain a ce moment la"
+    , "note": 3
     }
 , "nyxAssassin":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Dagon le retour"
+    , "comment": "Clairement envie de faire revenir le Nyx Dagon avec ça, le buff movespeed est chouette aussi"
+    , "note": 4
     }
 , "ogreMagi":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Shiny"
+    , "comment": "Alors ce truc Multicast sur toute ta team va etre un enfer pur et simple"
+    , "note": 4
     }
 , "omniknight":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Hammer Time"
+    , "comment": "Euh.. Alors dans l'état actuel du Héros c'est Zero comme shard. mais si le héros devient joué en core pourquoi pas"
+    , "note": 2
     }
 , "oracle":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "D'accord"
+    , "comment": "Le talent qui passe en Shard, c'est cool!"
+    , "note": 2
     }
 , "obsidianDestroyer":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Destroyer"
+    , "comment": "Tous les changements ont l'air tout cool, mais ca va prendre un peu de temps pour s'y faire! "
+    , "note": 3
     }
 , "pangolier":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Bouboule"
+    , "comment": "Un Shard défensif pour un héros qui a deja plein de trucs défensifs, ca me parait un peu overkill"
+    , "note": 2
     }
 , "phantomAssassin":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Maiev 2.0"
+    , "comment": "Throwback to war3. Un spell qui parait très très fort mais un gros manacost"
+    , "note": 4
     }
 , "phantomLancer":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "D'accooord"
+    , "comment": "L'ancien agha, n'a pas vu vraiment de play en son temps, n'en verra probablement pas plus"
+    , "note": 2
     }
 , "phoenix":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "PermaBirds"
+    , "comment": "Pas l'impression que le CD du spell était un probleme une fois le midgame passé, ca reste intéressant mais bof"
+    , "note": 2
     }
 , "puck":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Get away from me"
+    , "comment": "Un de mes préférées, c'est free deward, ca synergise avec le coil, augmentation de DPS. Tout est bon"
+    , "note": 5
     }
 , "pudge":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Om nom nom"
+    , "comment": "Ancien Aghs. Le nouvel Aghs a l'air très cool, anti heal encore."
+    , "note": 3
     }
 , "pugna":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Multislurp"
+    , "comment": "Ca renforce un truc deja fort. Tu dois avoir du cancel pour un Pugna, tu dois encore plus en avoir."
+    , "note": 4
     }
 , "queenofpain":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Silence, Peasant"
+    , "comment": "Ca va avec l'idée du héros qui go In, je pense qu'elle peut se permettre de le buy. J'aime"
+    , "note": 4
     }
 , "razor":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "AutoZap"
+    , "comment": "En vrai le héros a besoin de 12 shards par spell pour être bien. C'est cool mais bon..."
+    , "note": 2
     }
 , "riki":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "A la sieste!"
+    , "comment": "J'aime beaucoup l'idée, je suis pas sur que le héros ait envie de cramer des thunes la dedans ceci dit"
+    , "note": 3
     }
 , "rubick":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "I'm flying Jack 2.0"
+    , "comment": "Excellent shard qui file plein de nouvelles possibilités"
+    , "note": 5
     }
 , "sandKing":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "AutoDUDUDU"
+    , "comment": "Item de farm uniquement? C'est bof mais peut-etre que ca fait farm a mort, a voir"
+    , "note": 3
     }
 , "shadowDemon":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Mais pourquoi pas"
+    , "comment": "Alors c'est cool, mais faut voir si on peut se permettre de faire ca défensivement en game. J'aime l'idée"
+    , "note": 4
     }
 , "nevermore":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Encore plus magique"
+    , "comment": "On renforce encore plus le SF magique, deja bien fort. C'est ptet too much?"
+    , "note": 4
     }
 , "shadowShaman":
     { "title": "titre à remplir"

@@ -394,203 +394,203 @@
     , "note": 5
     }
 , "rubick":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Super"
+    , "comment": "Tool de save, d'escape, d'engage. Super après le core build."
+    , "note": 4
     }
 , "sandKing":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "LUL"
+    , "comment": "En concurrence avec OD pour la pire shard"
     , "note": 0
     }
 , "shadowDemon":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Situationnel"
+    , "comment": "Le heal arrive tard, ca m'a pas l'air ouf"
+    , "note": 1
     }
 , "nevermore":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Trop cool"
+    , "comment": "Super dans le build magique après le core"
+    , "note": 4
     }
 , "shadowShaman":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Mega fort"
+    , "comment": "Trop stylé, fonctionne sur les creeps et est buff par agha !"
+    , "note": 5
     }
 , "silencer":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "isOk"
+    , "comment": "Vole deux fois l'intel, à tester"
+    , "note": 3
     }
 , "skywrathMage":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Trop cool"
+    , "comment": "Ca enlève pas les faiblesses du héros mais ca fait des combos sympa!"
+    , "note": 4
     }
 , "slardar":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Solide"
+    , "comment": "Dommage que la reduc armure s'applique après le crush"
+    , "note": 4
     }
 , "slark":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Cool"
+    , "comment": "Peut-être un peu chiant à utiliser, mais bonne idée"
+    , "note": 4
     }
 , "snapfire":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Mouais"
+    , "comment": "C'est sympa mais ca m'emballe pas"
+    , "note": 3
     }
 , "sniper":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Fort"
+    , "comment": "C'est fort ET cool sur un sniper utilitaire !"
+    , "note": 4
     }
 , "spectre":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Situationel"
+    , "comment": "Potentiellement très fort pour atteindre des casters/ranges. Probablement nul."
+    , "note": 2
     }
 , "spiritBreaker":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Bonus"
+    , "comment": "Sympa! Tu peux charger pendant le cast delay"
+    , "note": 4
     }
 , "stormSpirit":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Nul"
+    , "comment": "Ca a l'air à chier. Il y a peut-être un build ?"
+    , "note": 1
     }
 , "sven":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Bon design mais"
+    , "comment": "on se fait chier"
+    , "note": 2
     }
 , "techies":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Fort"
+    , "comment": "La cast range est immense, le stun bonus"
+    , "note": 4
     }
 , "templarAssassin":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Nul ?"
+    , "comment": "Le temps que tu le sorte, ca ne sert plus à rien"
+    , "note": 1
     }
 , "terrorblade":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Dur à utiliser"
+    , "comment": "C'est pas nul mais très tricker à utiliser et pas forcément worth"
+    , "note": 3
     }
 , "tidehunter":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "ALORS LA"
+    , "comment": "Il y a un build!"
+    , "note": 3
     }
 , "shredder":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "POGGERS"
+    , "comment": "Osef que ca soit fort ou pas, c'est mega stylé!"
+    , "note": 5
     }
 , "tinker":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Sympa"
+    , "comment": "Enfin un tool de Tinker utilitaire, la cast range est faible"
+    , "note": 3
     }
 , "tiny":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Situationnel"
+    , "comment": "Mais vraiment fort dans la bonne situation!"
+    , "note": 4
     }
 , "treant":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Fort"
+    , "comment": "mais tu as déjà beaucoup de choses à faire sur Tréant"
+    , "note": 3
     }
 , "trollWarlord":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "..."
+    , "comment": "On se fait chier"
+    , "note": 2
     }
 , "tusk":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Bof"
+    , "comment": "Les stats sont nulles. Ca sert à scout ? Bof"
+    , "note": 1
     }
 , "abyssalUnderlord":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Fort et"
+    , "comment": "Il y a un build!"
+    , "note": 3
     }
 , "undying":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Hmmm"
+    , "comment": "Potentionnelement broken, il faut que je trouve le build"
+    , "note": 4
     }
 , "ursa":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Gratos mais"
+    , "comment": "On se fait chier"
+    , "note": 2
     }
 , "vengefulspirit":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Broken"
+    , "comment": "Complètement cassé! Il y a définitivement un build."
+    , "note": 5
     }
 , "venomancer":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Bof"
+    , "comment": "J'ai toujours détesté ce talent, c'est bien qu'il soit sur une shard"
+    , "note": 2
     }
 , "viper":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Stylé"
+    , "comment": "Ca a l'air très fort, à tester"
+    , "note": 4
     }
 , "visage":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Intéressant"
+    , "comment": "Pourquoi pas, j'aime beaucoup l'idée. Build radiance ?"
+    , "note": 4
     }
 , "voidSpirit":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Broken"
+    , "comment": "Super fort après core item, Puck 2.0"
+    , "note": 4
     }
 , "warlock":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Nul et"
+    , "comment": "On se fait chier"
+    , "note": 2
     }
 , "weaver":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Fort"
+    , "comment": "Super sympa pour le prix, à tester!"
+    , "note": 4
     }
 , "windrunner":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Nul mais"
+    , "comment": "il y a probablement une strat expert!"
+    , "note": 2
     }
 , "winterWyvern":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Nul ?"
+    , "comment": "Ca à l'air à chier, peut-être au 25 ?"
+    , "note": 1
     }
 , "witchDoctor":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Exceptionnel"
+    , "comment": "Incroyable! Tool de défense et d'attaque, fonctionne avec agha"
+    , "note": 4
     }
 , "skeletonKing":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Trop bien"
+    , "comment": "Enfin! Plus besoin d'attendre ce level 20 de meeeerde"
+    , "note": 5
     }
 , "zuus":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Core ?"
+    , "comment": "2000 range slow ? Forcestaff intégré ? 14s CD ?"
+    , "note": 5
     }
 }

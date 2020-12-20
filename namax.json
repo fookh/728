@@ -76,7 +76,7 @@
 , "chaosKnight":
     { "title": "T'as autre chose a faire"
     , "comment": "Franchement négligeable"
-    , "note": 2
+    , "note": 1
     }
 , "chen":
     { "title": "plz no"
@@ -161,7 +161,7 @@
 , "enchantress":
     { "title": "healchantress"
     , "comment": "meka + pipe + vlad + aghashard = healbot"
-    , "note": 2
+    , "note": 4
     }
 , "enigma":
     { "title": "pas la place"
@@ -389,208 +389,208 @@
     , "note": 0
     }
 , "riki":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "C'est marrant"
+    , "comment": "Mais c'est nul non ?"
+    , "note": 1 
     }
 , "rubick":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "swag"
+    , "comment": "Très très fort, j'adore l'idée"
+    , "note": 4
     }
 , "sandKing":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "Vraiment bof"
+    , "comment": "Buff du héros méga fort Shard mega nulle"
     , "note": 0
     }
 , "shadowDemon":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Mwé"
+    , "comment": "C'est pas un hard dispell :( "
+    , "note": 2
     }
 , "nevermore":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Always more"
+    , "comment": "Ultra core sur les builds magiques"
+    , "note": 5
     }
 , "shadowShaman":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "fait moi mal"
+    , "comment": "Pendant que tu m'attache, très fort"
+    , "note": 4
     }
 , "silencer":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "mwé"
+    , "comment": "Y'a un build ?"
+    , "note": 2
     }
 , "skywrathMage":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "assez cool"
+    , "comment": "Mais dur à sortir je trouve"
+    , "note": 2
     }
 , "slardar":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "5 secondes"
+    , "comment": "Durée trop basse pour que ce soit intérésant"
+    , "note": 1
     }
 , "slark":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "j'adore l'idée"
+    , "comment": "Mais je demande a etre convaincu par l'effet"
+    , "note": 2
     }
 , "snapfire":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "nul"
+    , "comment": "Dans l'optique de la snap actuelle"
+    , "note": 1
     }
 , "sniper":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "ez FTV LEAGUE"
+    , "comment": "A build sur tout sniper p4 qui se respecte"
+    , "note": 5
     }
 , "spectre":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Ah bah oui"
+    , "comment": "Mais non c'est nul"
+    , "note": 1
     }
 , "spiritBreaker":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "facile"
+    , "comment": "Le héros a pas besoin d'item, je le ferais peut etre pas dans 100% des games mais je le ferais"
+    , "note": 4
     }
 , "stormSpirit":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "bof"
+    , "comment": "Ca a l'air vraiment pas ouf"
+    , "note": 1
     }
 , "sven":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "L'inspiration"
+    , "comment": "A ragequit le patch"
     , "note": 0
     }
 , "techies":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "pourquoi pas"
+    , "comment": "Arrive au moment ou on utilise plus le spell"
+    , "note": 2
     }
 , "templarAssassin":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "bof"
+    , "comment": "héros a timing"
+    , "note": 1
     }
 , "terrorblade":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "Pas convaincu"
+    , "comment": "Mais alors pas du tout"
     , "note": 0
     }
 , "tidehunter":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Ultra core"
+    , "comment": "Tide mid when"
+    , "note": 4
     }
 , "shredder":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Rumble"
+    , "comment": "On copie LoL maintenant ? Stylé sinon"
+    , "note": 3
     }
 , "tinker":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "cool mais"
+    , "comment": "Cast range et effet faible"
+    , "note": 2
     }
 , "tiny":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Machine arriere"
+    , "comment": "le passif qui m'a le plus fait tilt au monde"
+    , "note": 4
     }
 , "treant":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "mwé"
+    , "comment": "Pas inspiré mais fort"
+    , "note": 3
     }
 , "trollWarlord":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "rly ?"
+    , "comment": "Autoreport"
     , "note": 0
     }
 , "tusk":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "is back"
+    , "comment": "Cétait le meilleur spell du héros"
+    , "note": 4
     }
 , "abyssalUnderlord":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "me gusta"
+    , "comment": "sortable + fort"
+    , "note": 4
     }
 , "undying":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "fort..."
+    , "comment": "...quand tu est riche avec UD, donc jamais"
+    , "note": 1
     }
 , "ursa":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "1400g et"
+    , "comment": "On se fait chier"
+    , "note": 1
     }
 , "vengefulspirit":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Broken + fort"
+    , "comment": "+ ca va etre nerf + jouez venge"
+    , "note": 5
     }
 , "venomancer":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Inspiration ?"
+    , "comment": "J'aime en very late"
+    , "note": 2
     }
 , "viper":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Fort mais "
+    , "comment": "Dur a sortir non ?"
+    , "note": 2
     }
 , "visage":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "j'aime l'idée"
+    , "comment": "Pas mal fort"
+    , "note": 4
     }
 , "voidSpirit":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "ultra fort"
+    , "comment": "Core + Fort"
+    , "note": 5
     }
 , "warlock":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
+    { "title": "Nul "
+    , "comment": "Et nul"
     , "note": 0
     }
 , "weaver":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "je trouve ca trop bien"
+    , "comment": "Y'a un build"
+    , "note": 4
     }
 , "windrunner":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Ulti AA"
+    , "comment": "Pas inspiré"
+    , "note": 2
     }
 , "winterWyvern":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "???"
+    , "comment": "Franchement nul"
+    , "note": 1
     }
 , "witchDoctor":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "J'adore"
+    , "comment": "I'M THE WARD BITCH"
+    , "note": 5
     }
 , "skeletonKing":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Jui fan"
+    , "comment": "Petits freres de l'outre tombe <3"
+    , "note": 4
     }
 , "zuus":
-    { "title": "titre à remplir"
-    , "comment": "Commentaire à remplir"
-    , "note": 0
+    { "title": "Moins cher que forcestaff"
+    , "comment": "Et mieux"
+    , "note": 4
     }
 }
